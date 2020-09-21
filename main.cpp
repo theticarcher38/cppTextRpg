@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    //changes the color of the console
+    //changes the color of the console text to dark purple (The way it should be).
     system("COLOR 5");
 
     string command;
@@ -16,13 +16,13 @@ int main()
     //Melee Weapon Constructor
     struct meleeWeapon
     {
-    string name;
-    int damage;
-    int durability;
-    int cost;
-    bool owned;
-    bool equipped;
-    } ironSword, steelSword;
+        string name;
+        int damage;
+        int durability;
+        int cost;
+        bool owned;
+        bool equipped;
+    } ironSword, steelSword, adamantineSword;
     
     //Melee Weapons Info
     ironSword.cost = 10;
@@ -36,6 +36,18 @@ int main()
     steelSword.durability = 40;
     steelSword.owned = false;
     steelSword.equipped = false;
+    
+    adamantineSword.cost = 100;
+    adamantineSword.damage = 30;
+    adamantineSword.durability = 200;
+    adamantineSword.owned = false;
+    adamantineSword.equipped = false;
+    
+    // Ranged Weapon Constructor
+    struct rangedWeapon
+    {
+    
+    }
 
     //Player constructor
     struct player
@@ -43,6 +55,7 @@ int main()
         string name;
         int health;
         int level;
+        int experiencePoints;
         int attributePoints;
         int cash;
         int stamina;
@@ -57,6 +70,7 @@ int main()
 
     player.health = 30;
     player.level = 1;
+    player.experiencePoints = 0;
     player.attributePoints = 30;
     player.strength = 0;
     player.dexterity = 0;
@@ -69,9 +83,6 @@ int main()
 
     string playerName;
     player.name = playerName;
-
-    int playerHealth;
-    player.health = playerHealth;
 
     int playerStrength;
     player.strength = playerStrength;
@@ -87,10 +98,39 @@ int main()
     player.charisma = playerCharisma;
 
     //Enemy Constructor
-    struct enemy 
+    struct enemy
     {
+        string enemyName;
+        int enemyHealth;
+        int enemyLevel;
+        int enemyExp;
+        int enemyStamina;
+        int enemyStrength;
+        int enemyDexterity;
+        int enemyConstitution;
+        int enemyIntelligence;
+        int enemyWisdom;
+        int enemyCharisma;
 
-    } enemy;
+    } hobGoblin, goblin;
+    
+    // Category Level One
+    enemy.enemyName = "Hobgoblin";
+    enemy.enemyHealth = 5;
+    enemy.enemyLevel = 1;
+    enemy.enemyExp = 5;
+    enemy.enemyStamina = 7;
+    enemy.enemyStrength = 1;
+    enemy.enemyDexterity = 1;
+    enemy.enemyConstitution = 1;
+    enemy.enemyIntelligence = 1;
+    enemy.enemyWisdom = 1;
+    enemy.enemyCharisma = 1;
+    
+    // Category Level 2
+    
+    
+    // Category Level 3
 
 
     cout << "What is your name? > ";
@@ -173,6 +213,9 @@ int main()
     cout << "You placed " << playerCharisma << " points into Charisma \n";
     player.attributePoints = player.attributePoints - playerCharisma;
     cout << "You have " << player.attributePoints << " Attribute Points left \n\n";
+    
+    // Health in its final form with constitution added to it.
+    int playerHealth = player.health + playerConstitution;
 
     cout << "Please enter a command > ";
     cin >> command;
