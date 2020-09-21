@@ -140,12 +140,12 @@ int main()
 
     //Strength Choice
     cout << "How many points do you wish to place into Strength? > ";
-    cin >> playerStrength;
+    cin >> playerStrength || command;
     if (player.attributePoints < playerStrength)
     {
         cout << "You do not have that many points to spend. \n";
         cout << "How many points do you wish to place into Strength? > ";
-        cin >> playerStrength;
+        cin >> playerStrength || command;
     }
     cout << "You placed " << playerStrength << " points into strength \n";
     player.attributePoints = player.attributePoints - playerStrength;
@@ -153,12 +153,12 @@ int main()
 
     //Dexterity Choice
     cout << "How many points do you wish to place into Dexterity? > ";
-    cin >> playerDexterity;
+    cin >> playerDexterity || command;
     if (player.attributePoints < playerDexterity)
     {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Dexterity? > ";
-    cin >> playerDexterity;
+    cin >> playerDexterity || command;
     }
     cout << "You placed " << playerDexterity << " points into Dexterity \n";
     player.attributePoints = player.attributePoints - playerDexterity;
@@ -167,12 +167,12 @@ int main()
     //Constitution Choice
 
     cout << "How many points do you wish to place into Constitution? > ";
-    cin >> playerConstitution;
+    cin >> playerConstitution || command;
     if (player.attributePoints < playerConstitution)
     {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Constitution? > ";
-    cin >> playerConstitution;
+    cin >> playerConstitution || command;
     }
     cout << "You placed " << playerConstitution << " points into Constitution \n";
     player.attributePoints = player.attributePoints - playerConstitution;
@@ -181,12 +181,12 @@ int main()
     //Intelligence Choice
 
     cout << "How many points do you wish to place into Intelligence? > ";
-    cin >> playerIntelligence;
+    cin >> playerIntelligence || command;
     if (player.attributePoints < playerIntelligence)
     {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Intelligence? > ";
-    cin >> playerIntelligence;
+    cin >> playerIntelligence || command;
     }
     cout << "You placed " << playerIntelligence << " points into Intelligence \n";
     player.attributePoints = player.attributePoints - playerIntelligence;
@@ -195,12 +195,12 @@ int main()
     //Wisdom Choice
 
     cout << "How many points do you wish to place into Wisdom? > ";
-    cin >> playerWisdom;
+    cin >> playerWisdom || command;
     if (player.attributePoints < playerWisdom)
     {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Wisdom? > ";
-    cin >> playerWisdom;
+    cin >> playerWisdom || command;
     }
     cout << "You placed " << playerWisdom << " points into Wisdom \n";
     player.attributePoints = player.attributePoints - playerWisdom;
@@ -209,12 +209,12 @@ int main()
     //Charisma Choice
 
     cout << "How many points do you wish to place into Charisma? > ";
-    cin >> playerCharisma;
+    cin >> playerCharisma || command;
     if (player.attributePoints < playerCharisma)
     {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Charisma? > ";
-    cin >> playerCharisma;
+    cin >> playerCharisma || command;
     }
     cout << "You placed " << playerCharisma << " points into Charisma \n";
     player.attributePoints = player.attributePoints - playerCharisma;
@@ -222,6 +222,7 @@ int main()
     
     // Health in its final form with constitution added to it.
     int playerHealth = player.health + playerConstitution;
+    int playerStamina = player.stamina + playerConstitution;
 
     cout << "Please enter a command > ";
     cin >> command;
@@ -229,6 +230,7 @@ int main()
     if (command == "!stats")
     {
         cout << "Health: " << playerHealth << "\n";
+        cout << "Stamina: " << playerStamina << "\n";
         cout << "Strength: " << playerStrength << "\n";
         cout << "Dexterity: " << playerDexterity << "\n";
         cout << "Constitution: " << playerConstitution << "\n";
