@@ -141,7 +141,8 @@ int main()
     //Strength Choice
     cout << "How many points do you wish to place into Strength? > ";
     cin >> playerStrength;
-    if (player.attributePoints < playerStrength) {
+    if (player.attributePoints < playerStrength)
+    {
         cout << "You do not have that many points to spend. \n";
         cout << "How many points do you wish to place into Strength? > ";
         cin >> playerStrength;
@@ -153,7 +154,8 @@ int main()
     //Dexterity Choice
     cout << "How many points do you wish to place into Dexterity? > ";
     cin >> playerDexterity;
-    if (player.attributePoints < playerDexterity) {
+    if (player.attributePoints < playerDexterity)
+    {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Dexterity? > ";
     cin >> playerDexterity;
@@ -166,7 +168,8 @@ int main()
 
     cout << "How many points do you wish to place into Constitution? > ";
     cin >> playerConstitution;
-    if (player.attributePoints < playerConstitution) {
+    if (player.attributePoints < playerConstitution)
+    {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Constitution? > ";
     cin >> playerConstitution;
@@ -179,7 +182,8 @@ int main()
 
     cout << "How many points do you wish to place into Intelligence? > ";
     cin >> playerIntelligence;
-    if (player.attributePoints < playerIntelligence) {
+    if (player.attributePoints < playerIntelligence)
+    {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Intelligence? > ";
     cin >> playerIntelligence;
@@ -192,7 +196,8 @@ int main()
 
     cout << "How many points do you wish to place into Wisdom? > ";
     cin >> playerWisdom;
-    if (player.attributePoints < playerWisdom) {
+    if (player.attributePoints < playerWisdom)
+    {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Wisdom? > ";
     cin >> playerWisdom;
@@ -205,7 +210,8 @@ int main()
 
     cout << "How many points do you wish to place into Charisma? > ";
     cin >> playerCharisma;
-    if (player.attributePoints < playerCharisma) {
+    if (player.attributePoints < playerCharisma)
+    {
     cout << "You do not have that many points to spend. \n";
     cout << "How many points do you wish to place into Charisma? > ";
     cin >> playerCharisma;
@@ -220,7 +226,8 @@ int main()
     cout << "Please enter a command > ";
     cin >> command;
 
-    if (command == "!stats") {
+    if (command == "!stats")
+    {
         cout << "Health: " << playerHealth << "\n";
         cout << "Strength: " << playerStrength << "\n";
         cout << "Dexterity: " << playerDexterity << "\n";
