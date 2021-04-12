@@ -1,11 +1,43 @@
 #include <iostream>
 
-#include "character.h"
-#include "weapon.h"
+#include "./engine/character.h"
+#include "./engine/weapon.h"
+
+/*
+* Weapon Constructor Layout
+* 
+* Weapon <weaponName>(<"Weapon Name">, <weaponDamage>, <weaponWeight>, <weaponType>);
+*/
+
+/*
+* Character Constructor Layout
+* 
+* Character player(<hp>, <sp>, <str>, <dex>, <con>, <int>, <wis>, <cha>, name);
+*/
 
 int main() {
-    Character player("Name");
-    Weapon ironSword("Iron Sword",5, 10, "melee");
-    std::cout << player.name << "\n";
-    std::cout << "\nName:" << ironSword.wName << "\nDamage: " << ironSword.wDamage << "\nWeight: " << ironSword.wWeight << "\nType: " << ironSword.wType << "\n";
+    std::string name;
+
+    std::cout << "What is your name? ";
+    std::cin >> name;
+    Character player(20, 10, 5, 5, 5, 5, 5, 5, name);
+    Weapon ironSword("Iron Sword", 5, 10, "melee");
+    std::cout << "Name: " << player.name
+              << "\n"
+              << "Hitpoints: " << player.hp
+              << "\n"
+              << "Spellpoints: " << player.sp
+              << "\n"
+              << "Strength: " << player.strength
+              << "\n"
+              << "Dexterity: " << player.dexterity
+              << "\n"
+              << "Constitution: " << player.constitution
+              << "\n"
+              << "Intelligence: " << player.intelligence
+              << "\n"
+              << "Wisdom: " << player.wisdom
+              << "\n"
+              << "Charisma: " << player.charisma
+              << "\n";
 }
