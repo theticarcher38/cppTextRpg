@@ -22,22 +22,25 @@ int main() {
     std::cin >> name;
     Character player(20, 10, 5, 5, 5, 5, 5, 5, name);
     Weapon ironSword("Iron Sword", 5, 10, "melee");
-    std::cout << "Name: " << player.name
+/*  std::cout << "\n"
+              << "Name:         " << player.name
               << "\n"
-              << "Hitpoints: " << player.hp
+              << "Hitpoints:    " << player.hp
               << "\n"
-              << "Spellpoints: " << player.sp
+              << "Spellpoints:  " << player.sp
               << "\n"
-              << "Strength: " << player.strength
+              << "Strength:     " << player.strength
               << "\n"
-              << "Dexterity: " << player.dexterity
+              << "Dexterity:    " << player.dexterity
               << "\n"
               << "Constitution: " << player.constitution
               << "\n"
               << "Intelligence: " << player.intelligence
               << "\n"
-              << "Wisdom: " << player.wisdom
+              << "Wisdom:       " << player.wisdom
               << "\n"
-              << "Charisma: " << player.charisma
+              << "Charisma:     " << player.charisma
               << "\n";
+              return 0;
+*/
 }
