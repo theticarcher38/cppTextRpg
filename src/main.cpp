@@ -1,8 +1,7 @@
 #include <iostream>
 
 #include "./engine/character.h"
-#include "./engine/weapon.h"
-
+#include "./engine/constructors/weaponConstructor.h"
 /*
 * Weapon Constructor Layout
 * 
@@ -21,8 +20,9 @@ int main() {
     std::cout << "What is your name? ";
     std::cin >> name;
     Character player(20, 10, 5, 5, 5, 5, 5, 5, name);
-    Weapon ironSword("Iron Sword", 5, 10, "melee");
-/*  std::cout << "\n"
+/*
+!   For testing Purposes
+    std::cout << "\n"
               << "Name:         " << player.name
               << "\n"
               << "Hitpoints:    " << player.hp
