@@ -1,3 +1,5 @@
+using namespace std;
+
 class Character {
     public:
         int hp;
@@ -9,9 +11,9 @@ class Character {
         int wisdom;
         int charisma;
         int attributePoints;
-        std::string name;
+        string name;
 
-        Character(int h, int s, int st, int de, int co, int in, int wi, int ch, int AP, std::string n) {
+        Character(int h, int s, int st, int de, int co, int in, int wi, int ch, int AP, string n) {
             hp = h;
             sp = s;
             strength = st;
