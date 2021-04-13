@@ -8,9 +8,10 @@ class Character {
         int intelligence;
         int wisdom;
         int charisma;
+        int attributePoints;
         std::string name;
 
-        Character(int h, int s, int st, int de, int co, int in, int wi, int ch, std::string n) {
+        Character(int h, int s, int st, int de, int co, int in, int wi, int ch, int AP, std::string n) {
             hp = h;
             sp = s;
             strength = st;
@@ -19,6 +20,7 @@ class Character {
             intelligence = in;
             wisdom = wi;
             charisma = ch;
+            attributePoints = AP;
             name = n;
         }
 };

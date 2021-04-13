@@ -17,7 +17,7 @@ int plrHp,
 
 int main() {
     characterCreation();
-    Character player(plrHp, plrSp, plrS, plrD, plrC, plrI, plrW, plrCh, plrName);
+    Character player(plrHp, plrSp, plrS, plrD, plrC, plrI, plrW, plrCh, plrAP, plrName);
 /*
 *   For testing Purposes
 *   std::cout << "\n"
@@ -42,5 +42,4 @@ int main() {
 *             return 0;
 *   End of Test
 */
-std::cout << player.name << "\n";
 }
