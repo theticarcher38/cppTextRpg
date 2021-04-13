@@ -1,15 +1,23 @@
 #include <iostream>
 
-#include "./engine/constructors/character.h"
 #include "./engine/objects/weaponObjects.h"
 #include "./engine/objects/enemyObjects.h"
+#include "./engine/constructors/character.h"
+std::string plrName;
+int plrHp, 
+    plrSp, 
+    plrS, 
+    plrD, 
+    plrC, 
+    plrI, 
+    plrW, 
+    plrCh,
+    plrAP;
+#include "./engine/functions/characterCreation.h"
 
 int main() {
-    std::string name;
-
-    std::cout << "What is your name? ";
-    std::cin >> name;
-    Character player(20, 10, 5, 5, 5, 5, 5, 5, name);
+    characterCreation();
+    Character player(plrHp, plrSp, plrS, plrD, plrC, plrI, plrW, plrCh, plrName);
 /*
 *   For testing Purposes
 *   std::cout << "\n"
@@ -34,4 +42,5 @@ int main() {
 *             return 0;
 *   End of Test
 */
+std::cout << player.name << "\n";
 }
