@@ -12,6 +12,7 @@ class Character {
         int charisma;
         int attributePoints;
         string name;
+        
 
         Character(int h, int s, int st, int de, int co, int in, int wi, int ch, int AP, string n) {
             hp = h;

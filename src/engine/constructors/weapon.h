@@ -7,7 +7,7 @@ class Weapon {
         int wId;
         string wType;
         string wName;
-        Weapon(std::string wN, int d, int w, int wId,string t) {
+        Weapon(std::string wN, int d, int w, int wId, string t) {
             wDamage = d;
             wWeight = w;
             wId = wId;
