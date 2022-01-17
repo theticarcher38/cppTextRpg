@@ -7,6 +7,7 @@ class Enemy {
         int armor;
         int damage;
         string name;
+        
         Enemy(int h, int s, int a, int d, string n) {
             hp = h;
             sp = s;
